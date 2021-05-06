@@ -1,12 +1,12 @@
-Helps save time when working on large matrices whsoe values are fixed and unchanging. Caches the inverse
-of the matrix so that the solve() calculation only need be done once.
+##Helps save time when working on large matrices whsoe values are fixed and unchanging. Caches the inverse
+##of the matrix so that the solve() calculation only need be done once.
 
 
-The first function here creates a "matrix", which is actually really a list containing funtions to 
-1. set the value of the matrix
-2. get the value of the matrix
-3. set the value of the inverse
-4. get the value of the inverse
+##The first function here creates a "matrix", which is actually really a list containing funtions to 
+##1. set the value of the matrix
+##2. get the value of the matrix
+##3. set the value of the inverse
+##4. get the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 	m <- NULL
@@ -23,11 +23,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-The second function calculates the inverse of the "matrix" created with the first function.
-The if loop saves time by checking to see if the inverse had already been calculated, if so the inverse 
-        is instead pulled from the cache.
-        If there is no inverse value already recorded then the function calculates this value and stores
-        in the cache with the setInverse function.
+##The second function calculates the inverse of the "matrix" created with the first function.
+##The if loop saves time by checking to see if the inverse had already been calculated, if so the inverse 
+##is instead pulled from the cache.
+##If there is no inverse value already recorded then the function calculates this value and stores
+##in the cache with the setInverse function.
 
 cacheSolve <- function(x, ...) {
 	m <- x$getInverse() 
